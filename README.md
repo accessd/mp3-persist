@@ -1,9 +1,13 @@
 # mp3Persist
 
 **mp3Persist** is a lightweight Go-based command-line tool designed to play mp3 files on macOS.
+
 It recursively scans a given directory for mp3 files, optionally shuffles them, and persists the playback order between runs.
+
 This means that if the application is interrupted and restarted, it resumes from where it left off.
+
 The tool leverages the macOS `afplay` command for audio playback and supports customizable break durations between tracks.
+
 This tool is particularly suitable for listening to lessons, especially language lessons, where maintaining the playback order and taking regular breaks can enhance the learning experience.
 
 ## What is it?
@@ -20,11 +24,13 @@ This tool is particularly suitable for listening to lessons, especially language
 
    ```bash
    ./mp3Persist -dir="/path/to/mp3/files" -break=2 -shuffle=1
-
-   -dir specifies the directory that contains mp3 files or subdirectories with mp3 files.
-   -break specifies the break duration in minutes between playing each file.
-   -shuffle is a flag (0 or 1) that determines if the list of files should be shuffled.
    ```
+
+-dir specifies the directory that contains mp3 files or subdirectories with mp3 files.
+
+-break specifies the break duration in minutes between playing each file.
+
+-shuffle is a flag (0 or 1) that determines if the list of files should be shuffled.
 
 2. **Resuming Playback:**
 
@@ -50,7 +56,7 @@ To support both Intel (`amd64`) and ARM (`arm64`) architectures, run:
 
     `./build`
 
-    The resulting `mp3Persist` binary will run natively on both Intel and ARM-based Macs.
+The resulting `mp3Persist` binary will run natively on both Intel and ARM-based Macs.
 
 ## License
 

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+GOOS=darwin GOARCH=amd64 go build -o mp3Persist-intel main.go
+GOOS=darwin GOARCH=arm64 go build -o mp3Persist-arm main.go
+lipo -create -output ./builds/mp3Persist mp3Persist-intel mp3Persist-arm
+
